@@ -15,12 +15,14 @@ const products_array = [
 ];
 
 products_array.forEach((product, index) => {
+  
   const [naam, prijs, afbeelding, beschrijving, beschikbaar] = product;
+
+
 
   const clone = productTemplate.cloneNode(true);
   clone.style.display = 'block';
   clone.setAttribute('id', 'product' + index);
-
   const suffix = index + 1;
 
 
@@ -30,8 +32,8 @@ products_array.forEach((product, index) => {
   clone.querySelector('.product___button').classList.add(`product___button${suffix}`);
 
   clone.querySelector('.product__img').src = afbeelding;
-  clone.querySelector('.product__img').alt = naam;
-  clone.querySelector('.product__title').textContent = naam;
+  clone.querySelector('.product__img').alt =  naam;
+  clone.querySelector('.product__title').textContent =  naam;
   clone.querySelector('.b1').textContent = beschrijving;
 
   if (!beschikbaar) {
