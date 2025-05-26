@@ -8,7 +8,7 @@ html{
 }
 body{
 background: #eddae1;
-background: radial-gradient(circle, rgba(237, 218, 225, 1) 0%, rgba(209, 219, 240, 1) 100%);    font-family: sans-serif;
+background: radial-gradient(circle, rgb(241, 229, 234) 0%, rgb(220, 227, 242) 100%);    font-family: sans-serif;
 }
 .cart-icon {
   position: fixed;
@@ -25,7 +25,7 @@ background: radial-gradient(circle, rgba(237, 218, 225, 1) 0%, rgba(209, 219, 24
   top: -0.8rem;
   right: -0.10rem;
   background-color: white;
-  color: #3a1c71;
+  color: #000000;
   font-size: 1.2rem;
   padding: 0.2rem 0.6rem;
   border-radius: 42%;
@@ -40,7 +40,10 @@ background: radial-gradient(circle, rgba(237, 218, 225, 1) 0%, rgba(209, 219, 24
      font-size: 2rem;
     background: white;
     gap: 2rem;
-    
+    border: 0.25rem solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+
 }
 
 .product_1{
@@ -115,7 +118,7 @@ background: radial-gradient(circle, rgba(237, 218, 225, 1) 0%, rgba(209, 219, 24
   margin-top: -5rem;
   margin-left: 24.5rem;
   background: transparent;
-border: 2px solid rgb(0, 0, 0); /* optioneel */
+border: 0.15rem solid rgb(0, 0, 0);
 color: rgb(0, 0, 0);
 cursor: pointer;
 }
