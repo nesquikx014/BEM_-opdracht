@@ -9,36 +9,34 @@ const productContainer = document.getElementById('products');
 const productTemplate = document.getElementById('product-template');
 
 const products_array = [
-  ["Deze piano wordt gekenmerkt door een warme en heldere klank.",4.299, "fotos/foto1.png", "De Buffetpiano", false],
-  ["De C2X heeft een rijke en heldere klank en produceert een mooie diepe toon.", 10.999, "fotos/foto2.png", "De Vleugelpiano", true],
-  ["De slanke pianoklavieren van Casio zijn erg handig voor wie klein woont.",419.99, "fotos/foto3.png", "Elektronische piano", true],
+  ["Deze piano wordt gekenmerkt door een warme en heldere klank.", 4299, "fotos/foto1.png", "Doutreligne Master D132 AdSilent 2 PE Black polished", false],
+  ["De C2X heeft een rijke en heldere klank en produceert een mooie diepe toon.", 10999, "fotos/foto2.png", "Yamaha C2X SH3 PE Black polished", true],
+  ["De slanke pianoklavieren van Casio zijn erg handig voor wie klein woont.", 419.99, "fotos/foto3.png", " Casio Privia PX-S1100 BK digitale piano ", true],
+  ["Deze piano wordt gekenmerkt door een warme en heldere klank.", 4299, "fotos/foto4.png", "De Klavecimbel", true],
+  ["De C2X heeft een rijke en heldere klank en produceert een mooie diepe toon.", 10999, "fotos/foto6.png", "Kawai GL10 153cm Grand Piano", true],
+  ["De slanke pianoklavieren van Casio zijn erg handig voor wie klein woont.", 419.99, "fotos/foto7.png", "Yamaha P-145B ", false],
+  
 ];
 
 products_array.forEach((product, index) => {
-  
-  const [naam, prijs, afbeelding, beschrijving, beschikbaar] = product;
-
-
+  const [beschrijving, prijs, afbeelding, naam, beschikbaar] = product;
 
   const clone = productTemplate.cloneNode(true);
   clone.style.display = 'block';
   clone.setAttribute('id', 'product' + index);
-  const suffix = index + 1;
-
-
-  clone.classList.add(`product_${suffix}`);
-  clone.querySelector('.product__img').classList.add(`product__img${suffix}`);
-  clone.querySelector('.b1').classList.add(`b${suffix}`);
-  clone.querySelector('.product___button').classList.add(`product___button${suffix}`);
 
   clone.querySelector('.product__img').src = afbeelding;
-  clone.querySelector('.product__img').alt =  naam;
-  clone.querySelector('.product__title').textContent =  naam;
-  clone.querySelector('.b1').textContent = beschrijving;
+  clone.querySelector('.product__img').alt = naam;
+  clone.querySelector('.product__title').textContent = naam;
+  clone.querySelector('.product__description').textContent = beschrijving;
 
-  if (!beschikbaar) {
-    clone.querySelector('.product___button').style.display = 'none';
-  }
+ if (!beschikbaar) {
+  const knop = clone.querySelector('.product___button');
+  knop.textContent = 'Uitverkocht';
+  knop.disabled = true;
+  knop.classList.add('uitverkocht');
+}
+
 
   clone.querySelector('.product___button').addEventListener('click', voegToeAanWinkelwagen);
 
