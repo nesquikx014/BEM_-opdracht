@@ -118,3 +118,77 @@ body {
   color: #666;
   cursor: not-allowed;
 }
+.product__prijs {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.text_header{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 47rem;
+  font-size: 7.3rem;
+  font-family: DINPro-bold;
+}
+.dropbtn {
+  background-color: #000000;
+  color: white;
+  padding: 1.6rem;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: black;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 1.4rem 1.2rem;
+  background-repeat: no-repeat;
+  font-size: 1.6rem;
+  padding: 1.4rem 2rem 1.2rem 4.5rem;
+  border: none;
+  border-bottom: 0.1rem solid   #000000;
+}
+
+/* The search field when it gets focus/clicked on */
+#myInput:focus {outline: 0.3rem solid #000000;}
+
+.dropdown {
+  position: relative;
+display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 1rem;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  min-width: 23rem;
+  border: 0.1rem solid transparent;
+  z-index: 1;
+  margin-top: 6rem;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 1.2rem 1.6rem;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
